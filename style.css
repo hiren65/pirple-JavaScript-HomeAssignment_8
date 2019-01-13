@@ -1,0 +1,22 @@
+html{
+    margin-left:auto ;
+    margin-right: auto;
+    width: 900px;
+    border: black 1px solid;
+}
+h1{
+    text-align: center;
+}
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    margin-left: 197px;
+
+}
+.box{
+    background-color: cornsilk;
+    border: black solid 1px;
+
+}
