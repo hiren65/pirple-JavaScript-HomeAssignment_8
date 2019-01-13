@@ -18,5 +18,16 @@ h1{
 .box{
     background-color: cornsilk;
     border: black solid 1px;
-
+    cursor: pointer;
+    font-size: 51px;
+    font-weight: 700;
+}
+#b1 span,#b2 span,#b3 span,#b4 span,#b5 span,#b6 span,#b7 span,#b8 span,#b9 span{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: darkgreen;
+    position: relative;
+    top: 25%;
 }
