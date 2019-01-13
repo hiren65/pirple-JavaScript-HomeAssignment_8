@@ -44,11 +44,15 @@ let bs8 = b8.querySelector("span");
 let b9 = document.getElementById("b9");
 let bs9 = b9.querySelector("span");
 
+let mesg = document.getElementById("mesg");
+let mesg1 = mesg.querySelector("span");
+
 b1.addEventListener("click",tic);
 
 function tic () {
-       totalSelectionCount++;
+
        if (num===0 && bs1.innerText==="1") {
+           totalSelectionCount++;
            bs1.innerText = "x";
            bs1.style.color = "red";
            t1 = "x";
@@ -61,6 +65,7 @@ function tic () {
            return;
        }
        if(num===1 && bs1.innerText==="1") {
+           totalSelectionCount++;
            bs1.innerText = "o";
            bs1.style.color = "black";
            t1 = "o";
@@ -77,8 +82,9 @@ function tic () {
 b2.addEventListener("click",tic2);
 
 function tic2 () {
-    totalSelectionCount++;
+
     if (num===0 && bs2.innerText==="2") {
+        totalSelectionCount++;
         bs2.innerText = "x";
         bs2.style.color = "red";
         t2 = "x";
@@ -91,6 +97,7 @@ function tic2 () {
         return;
     }
     if(num===1 && bs2.innerText==="2") {
+        totalSelectionCount++;
         bs2.innerText = "o";
         bs2.style.color = "black";
         t2 = "o";
@@ -107,8 +114,9 @@ function tic2 () {
 b3.addEventListener("click",tic3);
 
 function tic3 () {
-    totalSelectionCount++;
+
     if (num===0 && bs3.innerText==="3") {
+        totalSelectionCount++;
         bs3.innerText = "x";
         bs3.style.color = "red";
         t3 = "x";
@@ -121,14 +129,15 @@ function tic3 () {
         return;
     }
     if(num===1 && bs3.innerText==="3") {
+        totalSelectionCount++;
         bs3.innerText = "o";
         bs3.style.color = "black";
         t3 = "o";
         arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);checkResult(h2);checkResult(h3);
+        console.log(arrPoints);checkResult(h1);checkResult(h2);checkResult(h3);
         checkResult(v1);checkResult(v2);checkResult(v3);
         checkResult(c1);checkResult(c2);
-        num = 0;checkResult(h1);
+        num = 0;
         checkForTie(totalSelectionCount);
         return;
     }
@@ -137,8 +146,9 @@ function tic3 () {
 b4.addEventListener("click",tic4);
 
 function tic4 () {
-    totalSelectionCount++;
+
     if (num===0 && bs4.innerText==="4") {
+        totalSelectionCount++;
         bs4.innerText = "x";
         bs4.style.color = "red";
         t4 = "x";
@@ -151,6 +161,7 @@ function tic4 () {
         return;
     }
     if(num===1 && bs4.innerText==="4") {
+        totalSelectionCount++;
         bs4.innerText = "o";
         bs4.style.color = "black";
         t4 = "o";
@@ -167,8 +178,9 @@ function tic4 () {
 b5.addEventListener("click",tic5);
 
 function tic5 () {
-    totalSelectionCount++;
+
     if (num===0 && bs5.innerText==="5") {
+        totalSelectionCount++;
         bs5.innerText = "x";
         bs5.style.color = "red";
         t5 = "x";
@@ -181,6 +193,7 @@ function tic5 () {
         return;
     }
     if(num===1 && bs5.innerText==="5") {
+        totalSelectionCount++;
         bs5.innerText = "o";
         bs5.style.color = "black";
         t5 = "o";
@@ -197,8 +210,9 @@ function tic5 () {
 b6.addEventListener("click",tic6);
 
 function tic6 () {
-    totalSelectionCount++;
+
     if (num===0 && bs6.innerText==="6") {
+        totalSelectionCount++;
         bs6.innerText = "x";
         bs6.style.color = "red";
         t6 = "x";
@@ -211,6 +225,7 @@ function tic6 () {
         return;
     }
     if(num===1 && bs6.innerText==="6") {
+        totalSelectionCount++;
         bs6.innerText = "o";
         bs6.style.color = "black";
         t6 = "o";
@@ -227,8 +242,9 @@ function tic6 () {
 b7.addEventListener("click",tic7);
 
 function tic7 () {
-    totalSelectionCount++;
+
     if (num===0 && bs7.innerText==="7") {
+        totalSelectionCount++;
         bs7.innerText = "x";
         bs7.style.color = "red";
         t7 = "x";
@@ -241,6 +257,7 @@ function tic7 () {
         return;
     }
     if(num===1 && bs7.innerText==="7") {
+        totalSelectionCount++;
         bs7.innerText = "o";
         bs7.style.color = "black";
         t7 = "o";
@@ -257,8 +274,9 @@ function tic7 () {
 b8.addEventListener("click",tic8);
 
 function tic8 () {
-    totalSelectionCount++;
+
     if (num===0 && bs8.innerText==="8") {
+        totalSelectionCount++;
         bs8.innerText = "x";
         bs8.style.color = "red";
         t8 = "x";
@@ -271,6 +289,7 @@ function tic8 () {
         return;
     }
     if(num===1 && bs8.innerText==="8") {
+        totalSelectionCount++;
         bs8.innerText = "o";
         bs8.style.color = "black";
         t8 = "o";
@@ -287,8 +306,9 @@ function tic8 () {
 b9.addEventListener("click",tic9);
 
 function tic9 () {
-    totalSelectionCount++;
+
     if (num===0 && bs9.innerText==="9") {
+        totalSelectionCount++;
         bs9.innerText = "x";
         bs9.style.color = "red";
         t9 = "x";
@@ -301,6 +321,7 @@ function tic9 () {
         return;
     }
     if(num===1 && bs9.innerText==="9") {
+        totalSelectionCount++;
         bs9.innerText = "o";
         bs9.style.color = "black";
         t9 = "o";
@@ -341,6 +362,7 @@ function checkResult(k){
     if(count1===3 || count2 ===3 ) {
         string = "win";
         alert("win "+ k[0]);
+        mesg1.innerText = "Game "+k[0] + " win!!!";
         resetting();
     }
 
@@ -348,6 +370,8 @@ function checkResult(k){
 function checkForTie(total) {
     if (total === 9 && string === "not win" ){
         alert("Cats game!");
+        mesg1.innerText = "Game Tie !!";
+        resetting();
     }
 }
 function resetting() {
@@ -381,13 +405,15 @@ function resetting() {
         bs7.style.color = "#dfdada";
         t7 = undefined;
 
-        bs8.innerText = "7";
+        bs8.innerText = "8";
         bs8.style.color = "#dfdada";
         t8 = undefined;
 
-        bs9.innerText = "7";
+        bs9.innerText = "9";
         bs9.style.color = "#dfdada";
         t9 = undefined;
+
+        mesg1.innerText = "Game starts";
 
     },2000);
 }
