@@ -1,6 +1,7 @@
-//alert();
+//variable initialized for "x" and "0" selection and array created
 let t1,t2,t3,t4,t5,t6,t7,t8,t9;
 let arrPoints = [t1,t2,t3,t4,t5,t6,t7,t8,t9];
+//following are the arrays of all possible winning resutl
 let h1 = [t1,t2,t3];
 let h2 = [t4,t5,t6];
 let h3 = [t7,t8,t9];
@@ -12,11 +13,13 @@ let v3 = [t3,t6,t9];
 let c1 = [t1,t5,t9];
 let c2 = [t3,t5,t7];
 
-
+//variable for count selection of click
 let totalSelectionCount = 0;
+//result shows messages
 let string = "not win";
-
+//num variable is decides players turn if num = 0 then moves for player "x"
 let num = 0;
+//select id of rectangle id  and its child "span"
 let b1 = document.getElementById("b1");
 let bs1 = b1.querySelector("span");
 
@@ -47,6 +50,7 @@ let bs9 = b9.querySelector("span");
 let mesg = document.getElementById("mesg");
 let mesg1 = mesg.querySelector("span");
 
+//each rectangle attached with click events and colling function
 b1.addEventListener("click",tic);
 
 function tic () {
@@ -334,7 +338,7 @@ function tic9 () {
         return;
     }
 };
-
+//update arrayPoints
 function arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9){
     arrPoints = [t1,t2,t3,t4,t5,t6,t7,t8,t9];
     h1 = [t1,t2,t3];
@@ -346,6 +350,7 @@ function arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9){
     c1 = [t1,t5,t9];
     c2 = [t3,t5,t7];
 };
+//check result for each possibilities if wins then calls the function resetting()
 function checkResult(k){
     let count1 = 0;
     let count2 = 0;
@@ -367,6 +372,7 @@ function checkResult(k){
     }
 
 };
+//if there is tie than following function evokes
 function checkForTie(total) {
     if (total === 9 && string === "not win" ){
         alert("Cats game!");
@@ -374,6 +380,7 @@ function checkForTie(total) {
         resetting();
     }
 }
+//resetting after finishing games after 2 minute
 function resetting() {
     setTimeout(function () {
         totalSelectionCount = 0;
