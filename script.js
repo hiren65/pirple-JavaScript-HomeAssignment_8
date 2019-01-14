@@ -1,5 +1,5 @@
 //variable initialized for "x" and "0" selection and array created
-let t1="z",t2="z",t3="z",t4="z",t5="z",t6="z",t7="z",t8="z",t9="z" ;
+let t1,t2,t3,t4,t5,t6,t7,t8,t9 ;
 let arrPoints = [t1,t2,t3,t4,t5,t6,t7,t8,t9];
 //following are the arrays of all possible winning resutl
 let h1 = [t1,t2,t3];
@@ -185,6 +185,7 @@ function resetting() {
         t9 = undefined;
         arrPoints = [t1,t2,t3,t4,t5,t6,t7,t8,t9];
         mesg1.innerText = "Game starts";
+        string = "not win";
 
     },2000);
 }
