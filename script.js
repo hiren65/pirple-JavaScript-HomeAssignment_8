@@ -1,5 +1,5 @@
 //variable initialized for "x" and "0" selection and array created
-let t1,t2,t3,t4,t5,t6,t7,t8,t9;
+let t1="z",t2="z",t3="z",t4="z",t5="z",t6="z",t7="z",t8="z",t9="z" ;
 let arrPoints = [t1,t2,t3,t4,t5,t6,t7,t8,t9];
 //following are the arrays of all possible winning resutl
 let h1 = [t1,t2,t3];
@@ -50,294 +50,52 @@ let bs9 = b9.querySelector("span");
 let mesg = document.getElementById("mesg");
 let mesg1 = mesg.querySelector("span");
 
-//each rectangle attached with click events and colling function
-b1.addEventListener("click",tic);
+let arr1 = [b1,b2,b3,b4,b5,b6,b7,b8,b9];
+let arr2 = [bs1,bs2,bs3,bs4,bs5,bs6,bs7,bs8,bs9];
+let arr3 = ["1","2","3","4","5","6","7","8","9"];
 
-function tic () {
+for (let i=0;i<arr1.length;i++){
 
-       if (num===0 && bs1.innerText==="1") {
-           totalSelectionCount++;
-           bs1.innerText = "x";
-           bs1.style.color = "red";
-           t1 = "x";
-           arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-           console.log(h1);checkResult(h1);checkResult(h2);checkResult(h3);
-           checkResult(v1);checkResult(v2);checkResult(v3);
-           checkResult(c1);checkResult(c2);
-           checkForTie(totalSelectionCount);
-           num = 1;
-           return;
-       }
-       if(num===1 && bs1.innerText==="1") {
-           totalSelectionCount++;
-           bs1.innerText = "o";
-           bs1.style.color = "black";
-           t1 = "o";
-           arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-           console.log(arrPoints);checkResult(h1);checkResult(h2);checkResult(h3);
-           checkResult(v1);checkResult(v2);checkResult(v3);
-           checkResult(c1);checkResult(c2);
-           checkForTie(totalSelectionCount);
-           num = 0;
-           return;
-       }
-};
+    allEventListners(arr1[i],arr2[i],arr3[i],i);
+}
 
-b2.addEventListener("click",tic2);
+function allEventListners(ent,st,ii,nn){
+    ent.addEventListener("click",tic);
+    function tic () {
 
-function tic2 () {
+        if (num===0 && st.innerText=== ii) {
+            totalSelectionCount++;
+            st.innerText = "x";
+            st.style.color = "red";
+            arrPoints[nn] = "x";
+            arrUpdatePoint(arrPoints[0],arrPoints[1],arrPoints[2],arrPoints[3],arrPoints[4],arrPoints[5],arrPoints[6],
+                arrPoints[7],arrPoints[8]);
+            console.log(arrPoints);
+            console.log(h1);checkResult(h1);checkResult(h2);checkResult(h3);
+            checkResult(v1);checkResult(v2);checkResult(v3);
+            checkResult(c1);checkResult(c2);
+            checkForTie(totalSelectionCount);
+            num = 1;
+            return;
+        }
+        if(num===1 && st.innerText=== ii) {
+            totalSelectionCount++;
+            st.innerText = "o";
+            st.style.color = "black";
+            arrPoints[nn] = "o";
+            arrUpdatePoint(arrPoints[0],arrPoints[1],arrPoints[2],arrPoints[3],arrPoints[4],arrPoints[5],arrPoints[6],
+                arrPoints[7],arrPoints[8]);
+            console.log(arrPoints);checkResult(h1);checkResult(h2);checkResult(h3);
+            checkResult(v1);checkResult(v2);checkResult(v3);
+            checkResult(c1);checkResult(c2);
+            checkForTie(totalSelectionCount);
+            num = 0;
+            return;
+        }
+    };
 
-    if (num===0 && bs2.innerText==="2") {
-        totalSelectionCount++;
-        bs2.innerText = "x";
-        bs2.style.color = "red";
-        t2 = "x";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 1;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-    if(num===1 && bs2.innerText==="2") {
-        totalSelectionCount++;
-        bs2.innerText = "o";
-        bs2.style.color = "black";
-        t2 = "o";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        num = 0;
-        return;
-    }
-};
+}
 
-b3.addEventListener("click",tic3);
-
-function tic3 () {
-
-    if (num===0 && bs3.innerText==="3") {
-        totalSelectionCount++;
-        bs3.innerText = "x";
-        bs3.style.color = "red";
-        t3 = "x";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 1;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-    if(num===1 && bs3.innerText==="3") {
-        totalSelectionCount++;
-        bs3.innerText = "o";
-        bs3.style.color = "black";
-        t3 = "o";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        num = 0;
-        checkForTie(totalSelectionCount);
-        return;
-    }
-};
-
-b4.addEventListener("click",tic4);
-
-function tic4 () {
-
-    if (num===0 && bs4.innerText==="4") {
-        totalSelectionCount++;
-        bs4.innerText = "x";
-        bs4.style.color = "red";
-        t4 = "x";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 1;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-    if(num===1 && bs4.innerText==="4") {
-        totalSelectionCount++;
-        bs4.innerText = "o";
-        bs4.style.color = "black";
-        t4 = "o";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 0;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-};
-
-b5.addEventListener("click",tic5);
-
-function tic5 () {
-
-    if (num===0 && bs5.innerText==="5") {
-        totalSelectionCount++;
-        bs5.innerText = "x";
-        bs5.style.color = "red";
-        t5 = "x";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 1;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-    if(num===1 && bs5.innerText==="5") {
-        totalSelectionCount++;
-        bs5.innerText = "o";
-        bs5.style.color = "black";
-        t5 = "o";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 0;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-};
-
-b6.addEventListener("click",tic6);
-
-function tic6 () {
-
-    if (num===0 && bs6.innerText==="6") {
-        totalSelectionCount++;
-        bs6.innerText = "x";
-        bs6.style.color = "red";
-        t6 = "x";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 1;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-    if(num===1 && bs6.innerText==="6") {
-        totalSelectionCount++;
-        bs6.innerText = "o";
-        bs6.style.color = "black";
-        t6 = "o";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 0;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-};
-
-b7.addEventListener("click",tic7);
-
-function tic7 () {
-
-    if (num===0 && bs7.innerText==="7") {
-        totalSelectionCount++;
-        bs7.innerText = "x";
-        bs7.style.color = "red";
-        t7 = "x";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 1;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-    if(num===1 && bs7.innerText==="7") {
-        totalSelectionCount++;
-        bs7.innerText = "o";
-        bs7.style.color = "black";
-        t7 = "o";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 0;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-};
-
-b8.addEventListener("click",tic8);
-
-function tic8 () {
-
-    if (num===0 && bs8.innerText==="8") {
-        totalSelectionCount++;
-        bs8.innerText = "x";
-        bs8.style.color = "red";
-        t8 = "x";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 1;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-    if(num===1 && bs8.innerText==="8") {
-        totalSelectionCount++;
-        bs8.innerText = "o";
-        bs8.style.color = "black";
-        t8 = "o";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 0;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-};
-
-b9.addEventListener("click",tic9);
-
-function tic9 () {
-
-    if (num===0 && bs9.innerText==="9") {
-        totalSelectionCount++;
-        bs9.innerText = "x";
-        bs9.style.color = "red";
-        t9 = "x";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 1;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-    if(num===1 && bs9.innerText==="9") {
-        totalSelectionCount++;
-        bs9.innerText = "o";
-        bs9.style.color = "black";
-        t9 = "o";
-        arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9);
-        console.log(arrPoints);
-        num = 0;checkResult(h1);checkResult(h2);checkResult(h3);
-        checkResult(v1);checkResult(v2);checkResult(v3);
-        checkResult(c1);checkResult(c2);
-        checkForTie(totalSelectionCount);
-        return;
-    }
-};
 //update arrayPoints
 function arrUpdatePoint(t1,t2,t3,t4,t5,t6,t7,t8,t9){
     arrPoints = [t1,t2,t3,t4,t5,t6,t7,t8,t9];
@@ -366,7 +124,10 @@ function checkResult(k){
     }
     if(count1===3 || count2 ===3 ) {
         string = "win";
-        alert("win "+ k[0]);
+
+        setTimeout(function () {
+            confirm("win "+ k[0]);
+        },500);
         mesg1.innerText = "Game "+k[0] + " win!!!";
         resetting();
     }
@@ -375,7 +136,10 @@ function checkResult(k){
 //if there is tie than following function evokes
 function checkForTie(total) {
     if (total === 9 && string === "not win" ){
-        alert("Cats game!");
+
+        setTimeout(function () {
+            confirm("Cats game!");
+        },500);
         mesg1.innerText = "Game Tie !!";
         resetting();
     }
@@ -419,7 +183,7 @@ function resetting() {
         bs9.innerText = "9";
         bs9.style.color = "#dfdada";
         t9 = undefined;
-
+        arrPoints = [t1,t2,t3,t4,t5,t6,t7,t8,t9];
         mesg1.innerText = "Game starts";
 
     },2000);
